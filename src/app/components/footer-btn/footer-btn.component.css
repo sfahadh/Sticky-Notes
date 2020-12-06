@@ -1,0 +1,9 @@
+button {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-bottom: 30px;
+  height: 55px;
+  width: 65vw;
+  transform: translateX(-50%);
+}
