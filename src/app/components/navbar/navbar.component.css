@@ -5,3 +5,13 @@
 h1 {
   font-family: "Righteous", cursive;
 }
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 44px;
+  }
+
+  .navbar {
+    height: 100px;
+  }
+}

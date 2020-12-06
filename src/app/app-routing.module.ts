@@ -5,7 +5,7 @@ import { FormComponent } from './components/form/form.component';
 
 const routes: Routes = [
   { path: '', component: TodoListComponent },
-  { path: 'todo', component: FormComponent }
+  { path: 'note', component: FormComponent }
 ];
 
 @NgModule({
