@@ -1,5 +1,5 @@
 <form class="container">
-    <h2 class="text-center text-light mb-4">Note's Form</h2>
+    <h2 class="text-center mb-4">Note's Form</h2>
     <div class="row">
         <div class="col-lg-7 col-md-9 col-11">
             <input type="text" class="form-control" placeholder="Title">
@@ -16,5 +16,28 @@
         <div class="col-lg-7 col-md-9 col-11">
             <textarea rows="10" class="form-control" placeholder="Description"></textarea>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="btn-group dropright">
+            <button type="button" class="btn btn-dark">
+              Select color
+            </button>
+            
+            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" 
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropright</span>
+            </button>
+
+            <ul class="dropdown-menu">
+                <li class="dropdown-item">White</li>
+                <div class="dropdown-divider"></div>
+                <li class="dropdown-item">Black</li>
+                <div class="dropdown-divider"></div>
+                <li class="dropdown-item">Red</li>
+                <div class="dropdown-divider"></div>
+                <li class="dropdown-item">Green</li>
+            </ul>
+          </div>
     </div>
 </form>
