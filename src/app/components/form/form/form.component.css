@@ -34,11 +34,3 @@ input::placeholder,
 textarea::placeholder {
   color: rgb(177, 177, 177);
 }
-
-ul {
-  background-color: black;
-}
-
-.dropdown-item {
-  color: white;
-}
