@@ -13,6 +13,12 @@ export class NotesService {
     let i = 0;
     for (let key in localStorage) {
       if (i++ === localStorage.length) break;
+      this.stickyNotes.push(this.getStickyNote(parseInt(key)));
     }
   }
+
+  getStickyNote(id: number) {
+    return localStorage.getItem(id.toString());
+  }
+
 }
