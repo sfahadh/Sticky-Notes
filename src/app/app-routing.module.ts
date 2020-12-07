@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { HomeComponent } from './components/home/home/home.component';
 import { FormComponent } from './components/form/form/form.component';
 
 const routes: Routes = [
-  { path: '', component: TodoListComponent },
+  { path: '', component: HomeComponent },
   { path: 'note', component: FormComponent }
 ];
 
