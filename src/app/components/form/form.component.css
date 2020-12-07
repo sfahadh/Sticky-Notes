@@ -3,24 +3,30 @@
   margin-top: 20px;
 }
 
-.container {
-  margin-top: 80px;
+h2 {
+  font-family: "Courier New", Courier, monospace;
 }
 
-h2 {
-  color: #9b3ab4;
+.container {
+  margin-top: 80px;
 }
 
 input,
 textarea {
   background-color: rgb(0, 0, 0);
-  border: 2px solid #72fc45;
+  border: 3px solid;
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(155, 58, 180, 1) 0%,
+    rgba(30, 29, 253, 0.8701855742296919) 40%,
+    rgba(114, 252, 69, 1) 100%
+  );
+  border-image-slice: 1;
 }
 
 input:focus,
 textarea:focus {
-  background-color: rgb(19, 19, 19);
-  border: 2px solid #1e1dfd;
+  background-color: rgb(34, 34, 34);
   color: white;
 }
 
