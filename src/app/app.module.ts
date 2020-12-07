@@ -9,6 +9,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { FooterBtnComponent } from './components/footer-btn/footer-btn.component';
 import { DropdownComponent } from './components/form/dropdown/dropdown.component';
 import { InputsComponent } from './components/form/inputs/inputs.component';
+import { HomeComponent } from './components/home/home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InputsComponent } from './components/form/inputs/inputs.component';
     TodoListComponent,
     FooterBtnComponent,
     DropdownComponent,
-    InputsComponent
+    InputsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
