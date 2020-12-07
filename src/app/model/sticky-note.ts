@@ -4,5 +4,5 @@ export class StickyNote {
     subtitle: string;
     description: string;
     category: string;
-    date: Date;
+    date: any;
 }
