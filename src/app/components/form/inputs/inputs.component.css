@@ -14,11 +14,12 @@ textarea {
     rgba(114, 252, 69, 1) 100%
   );
   border-image-slice: 1;
+  color: white;
 }
 
 input:focus,
 textarea:focus {
-  background-color: rgb(23, 23, 23);
+  background-color: rgb(18, 18, 18);
   color: white;
 }
 

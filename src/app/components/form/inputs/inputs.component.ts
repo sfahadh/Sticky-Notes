@@ -10,5 +10,7 @@ export class InputsComponent implements OnInit {
   @Input() stickyNote;
 
   constructor() { }
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    console.log(this.stickyNote);
+  }
 }
