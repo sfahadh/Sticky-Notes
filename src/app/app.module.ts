@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormComponent } from './components/form/form.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { FooterBtnComponent } from './components/footer-btn/footer-btn.component';
+import { DropdownComponent } from './components/form/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterBtnComponent } from './components/footer-btn/footer-btn.component
     NavbarComponent,
     FormComponent,
     TodoListComponent,
-    FooterBtnComponent
+    FooterBtnComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
