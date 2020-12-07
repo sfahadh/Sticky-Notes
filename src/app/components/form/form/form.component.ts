@@ -17,6 +17,7 @@ export class FormComponent implements OnInit {
   save() {
     // this.Router.navigate(['']);
     this.stickyNote.date = Date.now();
+    this.stickyNote.color = "white"
     console.log(this.stickyNote);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
   
 export class DropdownComponent implements OnInit {
+  @Input() stickyNote;
+  categories: string[] = ["white", "black", "red", "blue", "green"];
+  categorySelected: string = "Select color";
+
   constructor() { }
   ngOnInit(): void { }
 }

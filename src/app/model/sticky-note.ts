@@ -3,8 +3,8 @@ export class StickyNote {
     title: string;
     subtitle: string;
     description: string;
-    category: string;
+    color: string;
     date: any;
 
-    constructor(title: string, subtitle: string, description: string, category: string) {}
+    constructor(title: string, subtitle: string, description: string, color: string) {}
 }
