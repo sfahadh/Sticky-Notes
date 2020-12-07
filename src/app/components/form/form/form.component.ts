@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
   
 export class FormComponent implements OnInit {
-  constructor() { }
+  constructor(private Router: Router) { }
   ngOnInit(): void { }
+
+  save() {
+    this.Router.navigate(['']);
+  }
 }

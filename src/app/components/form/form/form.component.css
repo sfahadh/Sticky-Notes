@@ -6,13 +6,7 @@ h2 {
   margin-top: 80px;
 }
 
-.btn {
-  background: linear-gradient(
-    90deg,
-    rgba(155, 58, 180, 1) 0%,
-    rgba(30, 29, 253, 0.8701855742296919) 40%,
-    rgba(114, 252, 69, 1) 100%
-  );
+.formBtn {
   color: white;
   font-family: "Castoro", serif;
   border-radius: 5%;
