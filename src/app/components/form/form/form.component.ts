@@ -13,13 +13,14 @@ export class FormComponent implements OnInit {
   stickyNote: StickyNote = new StickyNote("", "", "", "");
   submitted: boolean = false;
 
-  constructor(private Router: Router) { }
+  constructor(private Router: Router, private stickyNoteService: StickyNotesService) { }
   ngOnInit(): void { }
 
   save() {
     this.submitted = true;
     // this.Router.navigate(['']);
     this.stickyNote.date = Date.now();
+    this.stickyNoteService.addStickyNote(this.stickyNote);
     console.log(this.stickyNote);
   }
 }

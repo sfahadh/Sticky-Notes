@@ -21,6 +21,10 @@ export class StickyNotesService {
     return localStorage.getItem(id.toString());
   }
 
+  getAllStickyNotes() {
+    return this.stickyNotes;
+  }
+
   addStickyNote(stickyNote: StickyNote) {
     localStorage.setItem(this.id.toString(), JSON.stringify(stickyNote));
   }
