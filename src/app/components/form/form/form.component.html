@@ -4,9 +4,13 @@
     <app-inputs [stickyNote]="stickyNote"></app-inputs>
     <app-dropdown [stickyNote]="stickyNote" [submitted]="submitted"></app-dropdown>
 
-    <div class="row justify-content-center mt-5">
-        <div class="col-md-7 col-11">
-            <button class="btn btn-block btn-primary formBtn" (click)="save()">Save Sticky Note</button>
+    <div class="row justify-content-center mt-4">
+        <div class="col-lg-3 col-md-4 col-11 mb-3">
+            <button class="btn btn-block btn-success text-dark" (click)="save()">Save</button>
+        </div>
+        
+        <div class="col-lg-3 col-md-4 col-11 mb-3">
+            <button class="btn btn-block btn-danger">Cancel</button>
         </div>
     </div>
 </form>

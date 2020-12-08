@@ -6,8 +6,8 @@ h2 {
   margin-top: 80px;
 }
 
-.formBtn {
-  color: white;
+button {
   font-family: "Castoro", serif;
-  border-radius: 5%;
+  font-size: 18px;
+  border-radius: 10%;
 }
