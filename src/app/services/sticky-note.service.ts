@@ -6,7 +6,7 @@ import { StickyNote } from '../model/sticky-note';
 })
   
 export class StickyNotesService {
-  id: number = 1;
+  id: number = 0;
   stickyNotes: any[] = [];
 
   constructor() { 
@@ -16,6 +16,7 @@ export class StickyNotesService {
       this.stickyNotes.push(JSON.parse(this.getStickyNote(parseInt(key))));
       this.id = Math.max(this.id, parseInt(key));
     }
+    this.stickyNotes.sort((a, b) => b.date - a.date);
   }
 
   getStickyNote(id: number) {
@@ -27,9 +28,8 @@ export class StickyNotesService {
   }
 
   addStickyNote(stickyNote: StickyNote) {
-    stickyNote.id = this.id;
+    stickyNote.id = ++this.id;
     localStorage.setItem(this.id.toString(), JSON.stringify(stickyNote));
-    this.id++;
     this.stickyNotes.unshift(stickyNote);
   }
 }
