@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormComponent } from './components/form/form/form.component';
-import { TodoListComponent } from './components/home/todo-list/todo-list.component';
 import { FooterBtnComponent } from './components/home/footer-btn/footer-btn.component';
 import { DropdownComponent } from './components/form/dropdown/dropdown.component';
 import { InputsComponent } from './components/form/inputs/inputs.component';
@@ -19,7 +18,6 @@ import { StickyNoteListComponent } from './components/home/sticky-note-list/stic
     AppComponent,
     NavbarComponent,
     FormComponent,
-    TodoListComponent,
     FooterBtnComponent,
     DropdownComponent,
     InputsComponent,
