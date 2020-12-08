@@ -1,3 +1,7 @@
-select {
+select option {
   color: black;
+}
+label {
+  color: rgb(143, 143, 143);
+  font-weight: 600;
 }

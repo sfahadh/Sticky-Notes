@@ -4,7 +4,8 @@ body {
 }
 
 .formBtn,
-.navbar {
+.navbar,
+label {
   background: linear-gradient(
     90deg,
     rgba(155, 58, 180, 1) 0%,
