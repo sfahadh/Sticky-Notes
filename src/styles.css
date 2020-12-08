@@ -28,3 +28,17 @@ label {
     rgba(244, 18, 18, 1) 100%
   );
 }
+
+.btn-primary {
+  background: radial-gradient(
+    circle,
+    rgba(99, 169, 244, 1) 0%,
+    rgba(69, 18, 244, 1) 100%
+  );
+}
+
+.btn {
+  font-family: "Castoro", serif;
+  font-size: 18px;
+  border-radius: 10%;
+}

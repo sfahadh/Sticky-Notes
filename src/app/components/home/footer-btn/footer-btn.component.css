@@ -6,4 +6,5 @@ button {
   height: 55px;
   width: 65vw;
   transform: translateX(-50%);
+  font-weight: 600;
 }

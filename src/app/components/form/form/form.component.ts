@@ -27,4 +27,8 @@ export class FormComponent implements OnInit {
       this.submitted = true;
     }
   }
+
+  cancel() {
+    this.Router.navigate(['']);
+  }
 }
