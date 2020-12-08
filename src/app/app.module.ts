@@ -12,6 +12,7 @@ import { FooterBtnComponent } from './components/home/footer-btn/footer-btn.comp
 import { DropdownComponent } from './components/form/dropdown/dropdown.component';
 import { InputsComponent } from './components/form/inputs/inputs.component';
 import { HomeComponent } from './components/home/home/home.component';
+import { StickyNoteListComponent } from './components/home/sticky-note-list/sticky-note-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './components/home/home/home.component';
     FooterBtnComponent,
     DropdownComponent,
     InputsComponent,
-    HomeComponent
+    HomeComponent,
+    StickyNoteListComponent
   ],
   imports: [
     BrowserModule,
