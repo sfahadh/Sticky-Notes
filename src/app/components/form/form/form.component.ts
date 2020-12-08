@@ -10,11 +10,13 @@ import { StickyNote } from 'src/app/model/sticky-note';
   
 export class FormComponent implements OnInit {
   stickyNote: StickyNote = new StickyNote("", "", "", "");
+  submitted: boolean = false;
 
   constructor(private Router: Router) { }
   ngOnInit(): void { }
 
   save() {
+    this.submitted = true;
     // this.Router.navigate(['']);
     this.stickyNote.date = Date.now();
     console.log(this.stickyNote);

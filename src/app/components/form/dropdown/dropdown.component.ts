@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
   
 export class DropdownComponent implements OnInit {
   @Input() stickyNote;
+  @Input() submitted;
+  
   categories: string[] = ["white", "black", "red", "blue", "green"];
   categorySelected: string = "Select color";
 

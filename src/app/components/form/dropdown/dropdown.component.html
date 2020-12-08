@@ -1,12 +1,18 @@
 <div class="row justify-content-center mt-4">
     <div class="input-group mb-3 col-md-6 col-lg-4 col-11">
 		<div class="input-group-prepend">
-		  <label class="input-group-text bg-dark text-light" for="colors">Colors</label>
+			<label class="input-group-text bg-dark text-light" for="colors">Colors</label>
 		</div>
 
 		<select class="custom-select" id="colors" name="colors" [(ngModel)]="stickyNote.color">
-		  <option disabled>select below</option>
-		  <option *ngFor="let category of categories">{{ category }}</option>
+		  	<option disabled>select below</option>
+		  	<option *ngFor="let category of categories">{{ category }}</option>
 		</select>
-	  </div>
+	</div>
+</div>
+
+<div class="row justify-content-center mt-1">
+	<div class="alert alert-danger col-md-6 col-lg-4 col-11" *ngIf="stickyNote.color === undefined && submitted">
+		Must select a color
+	</div>
 </div>
