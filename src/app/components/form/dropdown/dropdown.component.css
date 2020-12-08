@@ -5,3 +5,8 @@ label {
   color: rgb(143, 143, 143);
   font-weight: 600;
 }
+
+#colors {
+  background-color: black;
+  color: white;
+}
