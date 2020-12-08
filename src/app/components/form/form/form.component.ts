@@ -17,10 +17,14 @@ export class FormComponent implements OnInit {
   ngOnInit(): void { }
 
   save() {
-    this.submitted = true;
-    this.stickyNote.date = Date.now();
-    this.stickyNoteService.addStickyNote(this.stickyNote);
-    console.log(this.stickyNote);
-    this.Router.navigate(['']);
+    if (this.stickyNote.color !== undefined) {
+      this.submitted = false;
+      this.stickyNote.date = Date.now();
+      this.stickyNoteService.addStickyNote(this.stickyNote);
+      console.log(this.stickyNote);
+      this.Router.navigate(['']);
+    } else {
+      this.submitted = true;
+    }
   }
 }
