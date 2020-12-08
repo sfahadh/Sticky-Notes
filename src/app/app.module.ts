@@ -12,6 +12,7 @@ import { DropdownComponent } from './components/form/dropdown/dropdown.component
 import { InputsComponent } from './components/form/inputs/inputs.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { StickyNoteListComponent } from './components/home/sticky-note-list/sticky-note-list.component';
+import { StickyNoteComponent } from './components/home/sticky-note/sticky-note.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StickyNoteListComponent } from './components/home/sticky-note-list/stic
     DropdownComponent,
     InputsComponent,
     HomeComponent,
-    StickyNoteListComponent
+    StickyNoteListComponent,
+    StickyNoteComponent
   ],
   imports: [
     BrowserModule,
