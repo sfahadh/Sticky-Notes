@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StickyNote } from 'src/app/model/sticky-note';
+import { StickyNotesService } from 'src/app/services/sticky-note.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
   
 export class TodoListComponent implements OnInit {
+  stickyNotes: StickyNote[];
 
-  constructor() { }
-  ngOnInit(): void { }
+  constructor(private stickyNoteService: StickyNotesService) { }
+  ngOnInit(): void { 
+    this.stickyNotes = this.stickyNoteService.getAllStickyNotes();
+    console.log(this.stickyNotes);
+  }
 
 }

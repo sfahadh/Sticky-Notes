@@ -13,7 +13,8 @@ export class StickyNotesService {
     let i = 0;
     for (let key in localStorage) {
       if (i++ === localStorage.length) break;
-      this.stickyNotes.push(this.getStickyNote(parseInt(key)));
+      this.stickyNotes.push(JSON.parse(this.getStickyNote(parseInt(key))));
+      this.id = Math.max(this.id, parseInt(key));
     }
   }
 
@@ -26,6 +27,9 @@ export class StickyNotesService {
   }
 
   addStickyNote(stickyNote: StickyNote) {
+    stickyNote.id = this.id;
     localStorage.setItem(this.id.toString(), JSON.stringify(stickyNote));
+    this.id++;
+    this.stickyNotes.unshift(stickyNote);
   }
 }

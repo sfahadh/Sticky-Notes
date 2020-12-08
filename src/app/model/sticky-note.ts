@@ -6,5 +6,5 @@ export class StickyNote {
     color: string;
     date: any;
 
-    constructor(title: string, topic: string, description: string, color: string) {}
+    constructor(id: number, title: string, topic: string, description: string, color: string) {}
 }

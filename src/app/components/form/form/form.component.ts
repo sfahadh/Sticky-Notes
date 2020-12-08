@@ -10,7 +10,7 @@ import { StickyNotesService } from 'src/app/services/sticky-note.service';
 })
   
 export class FormComponent implements OnInit {
-  stickyNote: StickyNote = new StickyNote("", "", "", "");
+  stickyNote: StickyNote = new StickyNote(0, "", "", "", "");
   submitted: boolean = false;
 
   constructor(private Router: Router, private stickyNoteService: StickyNotesService) { }
@@ -18,9 +18,9 @@ export class FormComponent implements OnInit {
 
   save() {
     this.submitted = true;
-    // this.Router.navigate(['']);
     this.stickyNote.date = Date.now();
     this.stickyNoteService.addStickyNote(this.stickyNote);
     console.log(this.stickyNote);
+    this.Router.navigate(['']);
   }
 }
