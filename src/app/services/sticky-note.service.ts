@@ -5,8 +5,8 @@ import { StickyNote } from '../model/sticky-note';
   providedIn: 'root'
 })
   
-export class NotesService {
-  id: number = 0;
+export class StickyNotesService {
+  id: number = 1;
   stickyNotes: any[] = [];
 
   constructor() { 
@@ -21,4 +21,7 @@ export class NotesService {
     return localStorage.getItem(id.toString());
   }
 
+  addStickyNote(stickyNote: StickyNote) {
+    localStorage.setItem(this.id.toString(), JSON.stringify(stickyNote));
+  }
 }

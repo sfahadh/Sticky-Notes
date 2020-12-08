@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { StickyNote } from 'src/app/model/sticky-note';
+import { StickyNotesService } from 'src/app/services/sticky-note.service';
 
 @Component({
   selector: 'app-form',

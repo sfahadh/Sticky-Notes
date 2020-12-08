@@ -8,9 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
   
 export class InputsComponent implements OnInit {
   @Input() stickyNote;
-
+  
   constructor() { }
-  ngOnInit(): void { 
-    console.log(this.stickyNote);
-  }
+  ngOnInit(): void { }
 }
