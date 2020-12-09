@@ -13,6 +13,7 @@ import { InputsComponent } from './components/form/inputs/inputs.component';
 import { HomeComponent } from './components/home/home/home.component';
 import { StickyNoteListComponent } from './components/home/sticky-note-list/sticky-note-list.component';
 import { StickyNoteComponent } from './components/home/sticky-note/sticky-note.component';
+import { FilterComponent } from './components/home/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StickyNoteComponent } from './components/home/sticky-note/sticky-note.c
     InputsComponent,
     HomeComponent,
     StickyNoteListComponent,
-    StickyNoteComponent
+    StickyNoteComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
