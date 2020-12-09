@@ -14,6 +14,5 @@ export class StickyNoteListComponent implements OnInit {
   constructor(private stickyNoteService: StickyNotesService) { }
   ngOnInit(): void { 
     this.stickyNotes = this.stickyNoteService.getAllStickyNotes();
-    console.log(this.stickyNotes);
   }
 }

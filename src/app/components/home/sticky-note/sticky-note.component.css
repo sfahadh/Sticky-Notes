@@ -10,11 +10,16 @@ hr {
   border-radius: 5%;
 }
 
+span {
+  font-family: cursive;
+  font-weight: 900;
+}
+
 .bg-primary {
   background: linear-gradient(
     0deg,
-    rgba(74, 129, 207, 1) 0%,
-    rgba(10, 0, 255, 1) 100%
+    rgb(155, 202, 245) 0%,
+    rgb(32, 25, 254) 100%
   );
 }
 
@@ -27,19 +32,11 @@ hr {
 }
 
 .bg-success {
-  background: linear-gradient(
-    0deg,
-    rgba(8, 238, 17, 1) 0%,
-    rgb(0, 101, 52) 100%
-  );
+  background: linear-gradient(0deg, rgb(84, 255, 90) 0%, rgb(0, 130, 19) 100%);
 }
 
 .bg-danger {
-  background: linear-gradient(
-    0deg,
-    rgba(255, 0, 0, 1) 0%,
-    rgb(121, 32, 0) 100%
-  );
+  background: linear-gradient(0deg, rgb(245, 97, 97) 0%, rgb(177, 0, 0) 100%);
 }
 
 .bg-warning {

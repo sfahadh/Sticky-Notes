@@ -12,9 +12,7 @@ export class StickyNoteComponent implements OnInit {
   @Input() stickyNote: StickyNote;
   
   constructor(private stickyNoteService: StickyNotesService) { }
-  ngOnInit(): void { 
-    console.log(this.stickyNote.color);
-  }
+  ngOnInit(): void { }
 
   edit(id: string) {
     console.log(id);
