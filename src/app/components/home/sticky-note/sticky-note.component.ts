@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StickyNote } from 'src/app/model/sticky-note';
 import { StickyNotesService } from 'src/app/services/sticky-note.service';
 
@@ -11,11 +12,11 @@ import { StickyNotesService } from 'src/app/services/sticky-note.service';
 export class StickyNoteComponent implements OnInit {
   @Input() stickyNote: StickyNote;
   
-  constructor(private stickyNoteService: StickyNotesService) { }
+  constructor(private stickyNoteService: StickyNotesService, private router: Router) { }
   ngOnInit(): void { }
 
   edit(id: number) {
-    console.log(id);
+    this.router.navigate(['note', id]);
   }
 
   delete(id: number) {
