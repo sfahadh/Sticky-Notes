@@ -9,3 +9,75 @@ hr {
 .card {
   border-radius: 5%;
 }
+
+.bg-primary {
+  background: linear-gradient(
+    0deg,
+    rgba(74, 129, 207, 1) 0%,
+    rgba(10, 0, 255, 1) 100%
+  );
+}
+
+.bg-secondary {
+  background: linear-gradient(
+    0deg,
+    rgb(210, 210, 210) 0%,
+    rgb(84, 84, 84) 100%
+  );
+}
+
+.bg-success {
+  background: linear-gradient(
+    0deg,
+    rgba(8, 238, 17, 1) 0%,
+    rgb(0, 101, 52) 100%
+  );
+}
+
+.bg-danger {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgb(121, 32, 0) 100%
+  );
+}
+
+.bg-warning {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 253, 226, 1) 0%,
+    rgba(255, 254, 0, 1) 100%
+  );
+}
+
+.bg-info {
+  background: linear-gradient(
+    0deg,
+    rgba(44, 255, 254, 1) 0%,
+    rgba(1, 177, 221, 1) 100%
+  );
+}
+
+.bg-dark {
+  background: linear-gradient(
+    0deg,
+    rgba(68, 68, 68, 1) 0%,
+    rgb(12, 12, 12) 100%
+  );
+}
+
+.bg-light {
+  background: linear-gradient(
+    0deg,
+    rgb(225, 225, 225) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.bg-primary,
+.bg-secondary,
+.bg-success,
+.bg-danger,
+.bg-dark {
+  color: white;
+}
