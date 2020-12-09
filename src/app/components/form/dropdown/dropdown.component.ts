@@ -10,7 +10,7 @@ export class DropdownComponent implements OnInit {
   @Input() stickyNote;
   @Input() submitted;
   
-  categories: string[] = ["white", "black", "red", "blue", "green"];
+  categories: string[] = ["blue", "gray", "green", "red", "yellow", "turquoise", "black", "white"];
   categorySelected: string = "Select color";
 
   constructor() { }

@@ -20,11 +20,32 @@ export class FormComponent implements OnInit {
     if (this.stickyNote.color !== undefined) {
       this.submitted = false;
       this.stickyNote.date = Date.now();
+      this.stickyNote.color = this.assignBootstrapColor(this.stickyNote.color);
       this.stickyNoteService.addStickyNote(this.stickyNote);
-      console.log(this.stickyNote);
       this.Router.navigate(['']);
     } else {
       this.submitted = true;
+    }
+  }
+
+  assignBootstrapColor(color: string) {
+    switch (color) {
+      case "blue":
+        return "bg-primary";
+      case "gray":
+        return "bg-secondary";
+      case "green":
+        return "bg-success";
+      case "red":
+        return "bg-danger";
+      case "yellow":
+        return "bg-warning";
+      case "turquoise":
+        return "bg-info";
+      case "black":
+        return "bg-dark";
+      case "white":
+        return "bg-light";
     }
   }
 
