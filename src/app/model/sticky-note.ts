@@ -1,7 +1,7 @@
 export class StickyNote {
     id: number;
+    title: string;
     topic: string;
-    subtitle: string;
     description: string;
     color: string;
     date: any;
