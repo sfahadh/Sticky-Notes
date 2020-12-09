@@ -32,4 +32,13 @@ export class StickyNotesService {
     localStorage.setItem(this.id.toString(), JSON.stringify(stickyNote));
     this.stickyNotes.unshift(stickyNote);
   }
+
+  deleteStickyNote(id: string) {
+    for (let i = 0; i < this.stickyNotes.length; i++) {
+      if (this.stickyNotes[i].id == id) {
+        this.stickyNotes.splice(i, 1);
+      }
+    }
+    localStorage.removeItem(id);
+  }
 }
