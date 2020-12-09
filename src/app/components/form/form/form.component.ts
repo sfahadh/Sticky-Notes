@@ -27,6 +27,7 @@ export class FormComponent implements OnInit {
       this.submitted = true;
     }
   }
+  
 
   assignBootstrapColor(color: string) {
     switch (color) {

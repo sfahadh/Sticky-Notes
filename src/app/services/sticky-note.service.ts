@@ -13,14 +13,14 @@ export class StickyNotesService {
     let i = 0;
     for (let key in localStorage) {
       if (i++ === localStorage.length) break;
-      this.stickyNotes.push(JSON.parse(this.getStickyNote(parseInt(key))));
+      this.stickyNotes.push(this.getStickyNote(parseInt(key)));
       this.id = Math.max(this.id, parseInt(key));
     }
     this.stickyNotes.sort((a, b) => b.date - a.date);
   }
 
   getStickyNote(id: number) {
-    return localStorage.getItem(id.toString());
+    return JSON.parse(localStorage.getItem(id.toString()));
   }
 
   getAllStickyNotes() {
@@ -34,11 +34,30 @@ export class StickyNotesService {
   }
 
   deleteStickyNote(id: string) {
+    this.removeStickyNoteFromArray(parseInt(id));
+    localStorage.removeItem(id);
+  }
+
+  removeStickyNoteFromArray(id: number) {
     for (let i = 0; i < this.stickyNotes.length; i++) {
-      if (this.stickyNotes[i].id == id) {
+      if (this.stickyNotes[i].id === id) {
         this.stickyNotes.splice(i, 1);
       }
     }
-    localStorage.removeItem(id);
+  }
+
+  editStickyNote(updatedStickyNote: StickyNote) {
+    const stickyNote = this.getStickyNote(updatedStickyNote.id);
+    stickyNote.title = updatedStickyNote.title;
+    stickyNote.topic = updatedStickyNote.topic;
+    stickyNote.description = updatedStickyNote.description;
+    stickyNote.color = updatedStickyNote.color;
+    updatedStickyNote.date = Date.now();
+
+    localStorage.removeItem(stickyNote.id);
+    localStorage.setItem(updatedStickyNote.id.toString(), JSON.stringify(updatedStickyNote));
+
+    this.removeStickyNoteFromArray(updatedStickyNote.id);
+    this.stickyNotes.unshift(updatedStickyNote);
   }
 }
