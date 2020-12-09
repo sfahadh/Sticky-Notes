@@ -12,6 +12,7 @@ import { StickyNotesService } from 'src/app/services/sticky-note.service';
 export class FormComponent implements OnInit {
   stickyNote: StickyNote = new StickyNote(0, "", "", "", "");
   submitted: boolean = false;
+  edittingForm: boolean = false;
 
   constructor(
     private router: Router,
@@ -21,11 +22,13 @@ export class FormComponent implements OnInit {
   ngOnInit(): void { 
     const id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
     if (!isNaN(id)) {
+      this.edittingForm = true;
       const fetchedStickyNote = this.stickyNoteService.getStickyNote(id);
       this.stickyNote.title = fetchedStickyNote.title;
       this.stickyNote.topic = fetchedStickyNote.topic;
       this.stickyNote.description = fetchedStickyNote.description;
       this.stickyNote.color = this.getColor(fetchedStickyNote.color);
+      this.stickyNote.id = id;
     }
   }
 
@@ -34,7 +37,14 @@ export class FormComponent implements OnInit {
       this.submitted = false;
       this.stickyNote.date = Date.now();
       this.stickyNote.color = this.getColor(this.stickyNote.color);
-      this.stickyNoteService.addStickyNote(this.stickyNote);
+      
+      if (this.edittingForm) {
+        this.stickyNoteService.editStickyNote(this.stickyNote);
+        this.edittingForm = false;
+      } else {
+        this.stickyNoteService.addStickyNote(this.stickyNote);
+      }
+
       this.router.navigate(['']);
     } else {
       this.submitted = true;

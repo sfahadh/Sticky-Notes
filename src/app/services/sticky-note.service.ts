@@ -52,12 +52,9 @@ export class StickyNotesService {
     stickyNote.topic = updatedStickyNote.topic;
     stickyNote.description = updatedStickyNote.description;
     stickyNote.color = updatedStickyNote.color;
-    updatedStickyNote.date = Date.now();
+    stickyNote.date = Date.now();
 
-    localStorage.removeItem(stickyNote.id);
-    localStorage.setItem(updatedStickyNote.id.toString(), JSON.stringify(updatedStickyNote));
-
-    this.removeStickyNoteFromArray(updatedStickyNote.id);
-    this.stickyNotes.unshift(updatedStickyNote);
+    this.removeStickyNoteFromArray(stickyNote.id);
+    this.stickyNotes.unshift(stickyNote);
   }
 }
