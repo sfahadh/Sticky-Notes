@@ -47,14 +47,10 @@ export class StickyNotesService {
   }
 
   editStickyNote(updatedStickyNote: StickyNote) {
-    const stickyNote = this.getStickyNote(updatedStickyNote.id);
-    stickyNote.title = updatedStickyNote.title;
-    stickyNote.topic = updatedStickyNote.topic;
-    stickyNote.description = updatedStickyNote.description;
-    stickyNote.color = updatedStickyNote.color;
-    stickyNote.date = Date.now();
+    localStorage.removeItem(updatedStickyNote.id.toString());
+    localStorage.setItem(updatedStickyNote.id.toString(), JSON.stringify(updatedStickyNote));
 
-    this.removeStickyNoteFromArray(stickyNote.id);
-    this.stickyNotes.unshift(stickyNote);
+    this.removeStickyNoteFromArray(updatedStickyNote.id);
+    this.stickyNotes.unshift(updatedStickyNote);
   }
 }
