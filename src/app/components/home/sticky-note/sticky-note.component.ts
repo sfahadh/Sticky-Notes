@@ -14,11 +14,11 @@ export class StickyNoteComponent implements OnInit {
   constructor(private stickyNoteService: StickyNotesService) { }
   ngOnInit(): void { }
 
-  edit(id: string) {
+  edit(id: number) {
     console.log(id);
   }
 
-  delete(id: string) {
-    this.stickyNoteService.deleteStickyNote(id);
+  delete(id: number) {
+    this.stickyNoteService.deleteStickyNote(id.toString());
   }
 }
