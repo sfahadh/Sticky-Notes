@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StickyNote } from 'src/app/model/sticky-note';
 import { StickyNotesService } from 'src/app/services/sticky-note.service';
 
@@ -13,8 +13,20 @@ export class FormComponent implements OnInit {
   stickyNote: StickyNote = new StickyNote(0, "", "", "", "");
   submitted: boolean = false;
 
-  constructor(private Router: Router, private stickyNoteService: StickyNotesService) { }
-  ngOnInit(): void { }
+  constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
+    private stickyNoteService: StickyNotesService) { }
+  ngOnInit(): void { 
+    const id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
+    if (!isNaN(id)) {
+      const fetchedStickyNote = this.stickyNoteService.getStickyNote(id);
+      this.stickyNote.title = fetchedStickyNote.title;
+      this.stickyNote.topic = fetchedStickyNote.topic;
+      this.stickyNote.description = fetchedStickyNote.description;
+      this.stickyNote.color = "red";
+    }
+  }
 
   save() {
     if (this.stickyNote.color !== undefined) {
@@ -22,12 +34,11 @@ export class FormComponent implements OnInit {
       this.stickyNote.date = Date.now();
       this.stickyNote.color = this.assignBootstrapColor(this.stickyNote.color);
       this.stickyNoteService.addStickyNote(this.stickyNote);
-      this.Router.navigate(['']);
+      this.router.navigate(['']);
     } else {
       this.submitted = true;
     }
   }
-  
 
   assignBootstrapColor(color: string) {
     switch (color) {
@@ -51,6 +62,6 @@ export class FormComponent implements OnInit {
   }
 
   cancel() {
-    this.Router.navigate(['']);
+    this.router.navigate(['']);
   }
 }
