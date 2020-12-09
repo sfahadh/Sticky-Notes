@@ -17,6 +17,7 @@ export class FormComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private stickyNoteService: StickyNotesService) { }
+  
   ngOnInit(): void { 
     const id = parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
     if (!isNaN(id)) {
@@ -24,7 +25,7 @@ export class FormComponent implements OnInit {
       this.stickyNote.title = fetchedStickyNote.title;
       this.stickyNote.topic = fetchedStickyNote.topic;
       this.stickyNote.description = fetchedStickyNote.description;
-      this.stickyNote.color = "red";
+      this.stickyNote.color = this.getColor(fetchedStickyNote.color);
     }
   }
 
@@ -32,7 +33,7 @@ export class FormComponent implements OnInit {
     if (this.stickyNote.color !== undefined) {
       this.submitted = false;
       this.stickyNote.date = Date.now();
-      this.stickyNote.color = this.assignBootstrapColor(this.stickyNote.color);
+      this.stickyNote.color = this.getColor(this.stickyNote.color);
       this.stickyNoteService.addStickyNote(this.stickyNote);
       this.router.navigate(['']);
     } else {
@@ -40,24 +41,26 @@ export class FormComponent implements OnInit {
     }
   }
 
-  assignBootstrapColor(color: string) {
-    switch (color) {
-      case "blue":
-        return "bg-primary";
-      case "gray":
-        return "bg-secondary";
-      case "green":
-        return "bg-success";
-      case "red":
-        return "bg-danger";
-      case "yellow":
-        return "bg-warning";
-      case "turquoise":
-        return "bg-info";
-      case "black":
-        return "bg-dark";
-      case "white":
-        return "bg-light";
+  getColor(color: string) {
+    const colors = {
+      blue: "bg-primary",
+      gray: "bg-secondary",
+      green: "bg-success", 
+      red: "bg-danger", 
+      yellow: "bg-warning", 
+      turquoise: "bg-info",
+      black: "bg-dark", 
+      white: "bg-light"
+    }
+
+    for (let key in colors) {
+      if (key === color) {
+        return colors[key];
+      }
+    
+      if (colors[key] === color) {
+        return key;
+      }
     }
   }
 
