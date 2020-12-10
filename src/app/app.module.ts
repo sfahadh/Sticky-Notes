@@ -15,6 +15,7 @@ import { StickyNoteListComponent } from './components/home/sticky-note-list/stic
 import { StickyNoteComponent } from './components/home/sticky-note/sticky-note.component';
 import { FilterComponent } from './components/home/filter/filter.component';
 import { FilterColorPipe } from './pipes/filter-color.pipe';
+import { FilterTopicPipe } from './pipes/filter-topic.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FilterColorPipe } from './pipes/filter-color.pipe';
     StickyNoteListComponent,
     StickyNoteComponent,
     FilterComponent,
-    FilterColorPipe
+    FilterColorPipe,
+    FilterTopicPipe
   ],
   imports: [
     BrowserModule,
