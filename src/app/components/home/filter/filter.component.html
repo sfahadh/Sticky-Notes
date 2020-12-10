@@ -17,7 +17,7 @@
                   	<label class="input-group-text text-white">Filter Color</label>
 				</div>
 				
-                <select class="custom-select" name="color" [(ngModel)]="colorSelected">
+                <select class="custom-select custom-border" name="color" [(ngModel)]="colorSelected">
                   <option selected></option>
                   <option *ngFor="let color of colors">{{ color }}</option>
                 </select>

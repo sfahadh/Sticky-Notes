@@ -1,19 +1,20 @@
-<div class="card" [class]="stickyNote.color" (click)="openModal()"
-    data-toggle="modal" data-target="#stickyNoteModal">
-    <div class="card-header">
-        <h2 class="card-title text-center">{{ stickyNote.title | slice: 0: 20 }}</h2>
-    </div>
-
-    <div class="card-body">
-        <h4 class="card-subtitle mb-2"><span class="mr-2">Topic:</span> {{ stickyNote.topic | slice: 0: 20 }}</h4>
-        <hr>
-        <p class="card-text">{{ stickyNote.description | slice: 0: 200 }}</p>
-    </div>
-
-    <br>
-
-    <div class="card-footer">
-        {{ stickyNote.date | date: 'short' }}
+<div class="card" [class]="stickyNote.color" data-toggle="modal" data-target="#stickyNoteModal">
+    <div (click)="openModal()">
+        <div class="card-header mb-1">
+            <h2 class="card-title text-center">{{ stickyNote.title | slice: 0: 20 }}</h2>
+        </div>
+    
+        <div class="card-body">
+            <h4 class="card-subtitle mb-2"><span class="mr-2">Topic:</span> {{ stickyNote.topic | slice: 0: 20 }}</h4>
+            <hr>
+            <p class="card-text">{{ stickyNote.description | slice: 0: 200 }}</p>
+        </div>
+    
+        <br>
+    
+        <div class="card-footer">
+            {{ stickyNote.date | date: 'short' }}
+        </div>
     </div>
     
     <div class="btn-group mt-2">
