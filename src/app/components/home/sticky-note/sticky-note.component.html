@@ -1,4 +1,4 @@
-<div class="card" [class]="stickyNote.color">
+<div class="card" [class]="stickyNote.color" data-toggle="modal" data-target="#stickyNoteModal">
     <div class="card-header">
         <h2 class="card-title text-center">{{ stickyNote.title | slice: 0: 20 }}</h2>
     </div>
@@ -20,3 +20,5 @@
         <button class="btn btn-lg btn-danger" (click)=delete(stickyNote.id)>Delete</button>
     </div>
 </div>
+
+<app-sticky-note-modal></app-sticky-note-modal>
