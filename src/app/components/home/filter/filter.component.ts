@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class FilterComponent implements OnInit {
   colorSelected: string;
   colors: string[] = ["blue", "gray", "green", "red", "yellow", "turquoise", "black", "white"];
-  
+
   constructor() { }
   ngOnInit(): void { }
 

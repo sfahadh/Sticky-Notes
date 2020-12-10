@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { StickyNote } from 'src/app/model/sticky-note';
 import { StickyNotesService } from 'src/app/services/sticky-note.service';
 
@@ -9,10 +9,8 @@ import { StickyNotesService } from 'src/app/services/sticky-note.service';
 })
   
 export class StickyNoteListComponent implements OnInit {
-  stickyNotes: StickyNote[];
+  @Input() stickyNotes: StickyNote[];
 
-  constructor(private stickyNoteService: StickyNotesService) { }
-  ngOnInit(): void { 
-    this.stickyNotes = this.stickyNoteService.getAllStickyNotes();
-  }
+  constructor() { }
+  ngOnInit(): void { }
 }

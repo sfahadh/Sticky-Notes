@@ -16,11 +16,11 @@
                   	<label class="input-group-text text-white">Filter Color</label>
 				</div>
 				
-                <select class="custom-select">
+                <select class="custom-select" name="color" [(ngModel)]="colorSelected">
                   <option selected></option>
                   <option *ngFor="let color of colors">{{ color }}</option>
                 </select>
-			</div>
+            </div>
         </div>
     </div>
 </div>

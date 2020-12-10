@@ -14,8 +14,9 @@ import { HomeComponent } from './components/home/home/home.component';
 import { StickyNoteListComponent } from './components/home/sticky-note-list/sticky-note-list.component';
 import { StickyNoteComponent } from './components/home/sticky-note/sticky-note.component';
 import { FilterComponent } from './components/home/filter/filter.component';
-import { FilterColorPipe } from './pipes/filter-color.pipe';
-import { FilterTopicPipe } from './pipes/filter-topic.pipe';
+
+import { FilterColorPipe } from './pipes/color/filter-color.pipe';
+import { FilterTopicPipe } from './pipes/topic/filter-topic.pipe';
 
 @NgModule({
   declarations: [
