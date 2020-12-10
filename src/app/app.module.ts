@@ -14,6 +14,7 @@ import { HomeComponent } from './components/home/home/home.component';
 import { StickyNoteListComponent } from './components/home/sticky-note-list/sticky-note-list.component';
 import { StickyNoteComponent } from './components/home/sticky-note/sticky-note.component';
 import { FilterComponent } from './components/home/filter/filter.component';
+import { FilterColorPipe } from './pipes/filter-color.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FilterComponent } from './components/home/filter/filter.component';
     HomeComponent,
     StickyNoteListComponent,
     StickyNoteComponent,
-    FilterComponent
+    FilterComponent,
+    FilterColorPipe
   ],
   imports: [
     BrowserModule,
