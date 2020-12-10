@@ -6,7 +6,8 @@
                   	<label class="input-group-text text-white">Search</label>
                 </div>
 
-                <input type="text" class="form-control" placeholder="topic">
+                <input type="text" class="form-control" placeholder="topic"
+                    name="topic" [(ngModel)]="topicSelected">
             </div>
         </div>
         
@@ -25,4 +26,8 @@
     </div>
 </div>
 
-<app-sticky-note-list [stickyNotes]="stickyNotes" [colorSelected]="colorSelected"></app-sticky-note-list>
+<app-sticky-note-list 
+    [stickyNotes]="stickyNotes" 
+    [colorSelected]="colorSelected"
+    [topicSelected]="topicSelected">
+</app-sticky-note-list>

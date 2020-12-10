@@ -10,6 +10,7 @@ import { StickyNote } from 'src/app/model/sticky-note';
 export class FilterComponent implements OnInit {
   @Input() stickyNotes: StickyNote[];
   colorSelected: string;
+  topicSelected: string;
   colors: string[] = ["blue", "gray", "green", "red", "yellow", "turquoise", "black", "white"];
 
   constructor() { }
