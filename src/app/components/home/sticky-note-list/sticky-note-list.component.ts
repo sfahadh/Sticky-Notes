@@ -10,6 +10,7 @@ import { StickyNotesService } from 'src/app/services/sticky-note.service';
   
 export class StickyNoteListComponent implements OnInit {
   @Input() stickyNotes: StickyNote[];
+  @Input() colorSelected: string;
 
   constructor() { }
   ngOnInit(): void { }
