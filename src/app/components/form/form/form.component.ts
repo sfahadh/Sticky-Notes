@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StickyNote } from 'src/app/model/sticky-note';
 import { StickyNotesService } from 'src/app/services/sticky-note.service';
+import { getColor } from '../../../functions/getColor'
 
 @Component({
   selector: 'app-form',
@@ -27,7 +28,7 @@ export class FormComponent implements OnInit {
       this.stickyNote.title = fetchedStickyNote.title;
       this.stickyNote.topic = fetchedStickyNote.topic;
       this.stickyNote.description = fetchedStickyNote.description;
-      this.stickyNote.color = this.getColor(fetchedStickyNote.color);
+      this.stickyNote.color = getColor(fetchedStickyNote.color);
       this.stickyNote.id = id;
     }
   }
@@ -36,7 +37,7 @@ export class FormComponent implements OnInit {
     if (this.stickyNote.color !== undefined) {
       this.submitted = false;
       this.stickyNote.date = Date.now();
-      this.stickyNote.color = this.getColor(this.stickyNote.color);
+      this.stickyNote.color = getColor(this.stickyNote.color);
       
       if (this.edittingForm) {
         this.stickyNoteService.editStickyNote(this.stickyNote);
@@ -48,29 +49,6 @@ export class FormComponent implements OnInit {
       this.router.navigate(['']);
     } else {
       this.submitted = true;
-    }
-  }
-
-  getColor(color: string) {
-    const colors = {
-      blue: "bg-primary",
-      gray: "bg-secondary",
-      green: "bg-success", 
-      red: "bg-danger", 
-      yellow: "bg-warning", 
-      turquoise: "bg-info",
-      black: "bg-dark", 
-      white: "bg-light"
-    }
-
-    for (let key in colors) {
-      if (key === color) {
-        return colors[key];
-      }
-    
-      if (colors[key] === color) {
-        return key;
-      }
     }
   }
 
