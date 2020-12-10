@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { StickyNote } from 'src/app/model/sticky-note';
-import { StickyNotesService } from 'src/app/services/sticky-note.service';
 
 @Component({
   selector: 'app-sticky-note-list',
@@ -13,6 +12,12 @@ export class StickyNoteListComponent implements OnInit {
   @Input() colorSelected: string;
   @Input() topicSelected: string;
 
+  stickyNote: StickyNote;
+
   constructor() { }
   ngOnInit(): void { }
+
+  passedStickyNote(stickyNote) {
+    this.stickyNote = stickyNote;
+  }
 }
